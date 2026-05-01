@@ -26,3 +26,5 @@ tiktoken
 fastapi
 uvicorn
 pydantic
+
+streamlit

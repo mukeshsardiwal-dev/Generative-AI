@@ -3,12 +3,30 @@ load_dotenv()
 
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, SystemMessage,HumanMessage
-messages = [
-    SystemMessage(content="You are a Funny AI Agent and a Comedian who can crack jokes.")
-]
 
 model = ChatOpenAI(model="gpt-4o-mini",temperature=0.9)
-print("------------You are taking to AI Agent Created By Mukesh Sardiwal Type 0 to exit------------")
+print("Choose Your AI mode")
+print("Press 1 for angry Mode")
+print("Press 2 for funny Mode")
+print("Press 3 for sad Mode")
+
+choice = int(input("Tell your Response: - "))
+
+if choice == 1:
+    mode = "You are an angry AI Agent. You respond aggresively and impatiently."
+elif choice == 2:
+    mode = "You are an funny AI Agent. You respond very funny and crazy and humorous."
+elif choice == 3: 
+    mode = "You are an angry AI Agent. You respond depressed and sadly anxiety ."
+else:
+    print("Enter valid mode to start === ")
+
+print("------------You are {} Type 0 to exit------------")
+
+
+messages = [
+    SystemMessage(content=mode)
+]
 while(True):
 
     prompt = input("You: ")
