@@ -1,0 +1,28 @@
+# Core LangChain
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+
+# Provider integrations
+langchain-openai
+langchain-google-genai
+langchain-mistralai
+
+# APIs / SDKs
+openai>=1.0.0
+groq
+google-generativeai
+mistralai
+
+# Weaviate (vector database)
+weaviate-client
+
+# Utilities
+python-dotenv
+requests
+tiktoken
+
+# Optional (for building apps)
+fastapi
+uvicorn
+pydantic
